@@ -1,0 +1,116 @@
+
+
+.panel{
+	margin: 200px 0px 130px auto;
+    display: inline-block;
+	width: 100%;
+	
+}
+
+.panel li{
+	background: transparent;
+	box-shadow: 9px 10px 18px 12px rgb(255 255 255 / 30%);
+	width: 90%;
+	height: 100px;
+	list-style: none;
+	margin-top: 100px;
+	border-radius: 12px; 
+	display: inline-block
+}
+
+.panel p {
+	display: block;
+	font-size: 30px;
+    padding: 4px 30px;
+	color: #A8A8A8
+}
+
+.panel a {
+	color: #bbb362;
+	font-weight: bold;
+	float: right;
+	margin: -70px 30px;
+	display: inline-block;
+    border: 1px solid #888;
+    background: #333;
+    padding: 10px;
+    border-radius: 7px;
+    box-shadow: 3px 4px 12px 7px rgb(187 179 98 / 24%);
+}
+
+.panel a:hover,
+.panel a:active{
+	background: linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+
+	}
+.panel.black a {
+	background-color: #bada55;
+	border: 1px solid #fff;
+}
+
+
+
+
+/*ADAPTIVE*/
+
+@media screen and (max-width: 1380px){
+	.panel{
+		width: 95%;
+	}
+}
+
+
+
+@media screen and (min-width: 810px){
+	.mobile{
+		display: none;
+	}
+}
+	
+@media screen and (max-width: 810px){
+	.comp{
+		display: none;
+	}
+	
+}
+
+
+
+
+@media screen and (max-width: 650px){
+	.mobile p{
+		font-size: 21px;
+		max-width: 60%;
+		margin: 35px 0px;
+		padding-left: 15px;
+	}
+}
+@media screen and (max-width: 510px){
+	.panel{
+		padding-left: 10px;
+	}
+	.panel li{
+		width: 100%;
+	}	
+
+	#shrink{
+	 	margin: 26px 0px 23px;
+	  	max-width: 46%;
+
+	}
+
+}
+
+@media screen and (max-width: 350px){
+	#shrink{
+		max-width: 60%;
+	}
+	
+
+}
+
+
+
+
+
+

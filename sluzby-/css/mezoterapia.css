@@ -1,0 +1,67 @@
+
+
+.content{
+	margin-top: 400px;
+	text-align: center;
+	color: #A8A8A8;
+	font-size: 21px;
+	letter-spacing: 1px;
+
+}
+
+.post-content{
+	text-align: left;
+	letter-spacing: 1px;
+    line-height: 45px;
+    font-size: 22px;
+    width: 70%;
+    margin: 50px auto;
+
+}
+
+.content p:first-child{
+ 	font-size: 24px;
+ 	line-height: 36px;
+ 	margin-left: 0px;
+ 	margin-right: 0px;
+}
+.pullquote{
+	max-width: 600px;
+}
+
+.pullquote.float-right{
+    margin: -12px 0 24px 15px;
+    float: right;
+    text-align: left;
+}
+
+.pullquote.float-left{
+    margin: 0 auto;
+}
+
+.content h4:last-child{
+	margin-top: 700px;
+}
+
+.pullquote.right{
+    margin: 130px auto
+}
+
+
+
+
+@media screen and (max-width: 800px){
+	h3{
+		font-size: 30px;
+	}
+	.content{
+		width: 90%;
+		padding-left: 5%;
+	}
+	.post-content{
+		width: 95%;
+}
+	.pullquote{	
+		width: 95%;
+}
+}
