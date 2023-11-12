@@ -59,9 +59,6 @@ a{
 	text-decoration: none;
 }
 
-.container{
-}
-
 .container li{
     list-style: none;
     display: block;
@@ -71,7 +68,7 @@ a{
 /*NAVIGATION*/
 
 .navigation{
-	margin-top: 2em; /* 32/16 */
+	margin: 1.5em 0; /* 32/16 */
     margin-left: 111px;
 }
 
@@ -102,13 +99,10 @@ a{
 
 /*SOCIAL*/
 
-
-.social{
-}
 .social li{
 	display: inline-block;
 	float: right;
-	margin-top: 0em; /* 1/16 */
+	margin-top: -0.2em; /* 1/16 */
 
 }
 .social .fa{
@@ -131,63 +125,20 @@ a{
 	color: #bbb362;
 }	
 
-
-/*LOGO*/
-h1 {
-    margin: 0 auto;
-}
-.logo{
-	
-	width: 60%;
-	height: 20em;
-	background: url('jpg/vals3.png') center top no-repeat;
-	background-size: contain /*cover*/;
-	margin-top: -1.5625em; 
-	background-position: 0% 0%
+/*Main*/
+.logoSec{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 }
-.logo a{
-	display: block;
-
-	text-indent: -9999px ;
+img{
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
 }
-
-/*MAIN*/
- /*article {
- 	color: #000;
- 	
- 	margin: 0 auto;
-    text-align: center;
-    margin-left: 0;
- }
-h2{
-	font-size: 40px;
-} 
-
-
-.pullquote.float-right{
-	margin: auto;
-	max-width: 400px;
-	line-height: 24px;
-    margin-left: 80px;
-    padding-top: 33px;
-}
-.makeup{
-	vertical-align: middle;
-	font-size: 22px;
- 	font-weight: bold;
-
-	}
-section{
-	background: url('jpg/04.jpg') center no-repeat;
-	width: 100%;
-	left: 0;
-	height: 545px;
-	position: absolute;
-	background-size: cover;
-	background-attachment: fixed
-
-}*/
 
 
 /*FOOTER*/

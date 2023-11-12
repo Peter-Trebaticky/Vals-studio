@@ -57,8 +57,6 @@ a{
 	text-decoration: none;
 }
 
-.container{
-}
 
 .container li{
     list-style: none;
@@ -69,7 +67,7 @@ a{
 /*NAVIGATION*/
 
 .navigation{
-	margin-top: 2em; /* 32/16 */
+	margin: 1.5em 0; /* 32/16 */
     margin-left: 111px;
 }
 
@@ -108,7 +106,7 @@ a{
 .social li{
 	display: inline-block;
 	float: right;
-	margin-top: 0em;
+	margin-top: -0.2em;
 }
 .social .fa{
 	font-size: 1.0625em; /* 17/16 */

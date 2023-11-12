@@ -5,30 +5,29 @@
 * Browsers: last 4 version
 */
 
-/*GENERAL*/
-/*{
-	outline: 3px solid black;
-}*/
-
-hmtl{
+hmtl {
 	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-*, *:before, *:after{
+*,
+*:before,
+*:after {
 	-webkit-box-sizing: inherit;
-	        box-sizing: inherit;
+	box-sizing: inherit;
 }
-body{
+
+body {
 	color: #323232;
 	max-width: 1000px;
 	margin: 0px auto;
-	font-family: sans-serif ;
+	font-family: sans-serif;
 	-webkit-font-smoothing: antialiased;
 	background: #000;
-	
+
 }
-header{
+
+header {
 	margin-top: 20px;
 	/*height: 50px;*/
 }
@@ -36,40 +35,39 @@ header{
 .container:before,
 .group:before,
 .menu:before,
-.group:before
-.group:after {
+.group:before .group:after {
 	content: " ";
-	display: table; 
+	display: table;
 }
+
 .container:after,
 .groupafter,
 .menu:after {
 	clear: both;
 }
+
 .container,
 .group,
 .menu {
 	*zoom: 1;
 }
 
-a{ 
+a {
 	text-decoration: none;
 }
 
-.container{
-}
-
-.container li{
-    list-style: none;
-    display: block;
+.container li {
+	list-style: none;
+	display: block;
 }
 
 
 /*NAVIGATION*/
 
-.navigation{
-	margin-top: 2em; /* 32/16 */
-    margin-left: 111px;
+.navigation {
+	margin: 1.5em 0;
+	/* 32/16 */
+	margin-left: 111px;
 }
 
 .navigation li {
@@ -81,19 +79,23 @@ a{
 
 .navigation a {
 	color: #A8A8A8;
-	font-size: 1.4375em; /* 23/16 */
-	width: 8.875em; /* 142/16 */
-	height: 7.5em; /* 120/16 */
+	font-size: 1.4375em;
+	/* 23/16 */
+	width: 8.875em;
+	/* 142/16 */
+	height: 7.5em;
+	/* 120/16 */
 	text-align: center;
 	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
 	padding: 1.25em;
 
 }
+
 .selected a,
 .navigation a:hover,
-.navigation a:focus{
+.navigation a:focus {
 	color: #bbb362;
 }
 
@@ -101,37 +103,41 @@ a{
 
 /*SOCIAL*/
 
-
-.social{
-}
-.social li{
+.social li {
 	display: inline-block;
 	float: right;
-	margin-top: 0em;
+	margin-top: -0.2em;
 }
-.social .fa{
-	font-size: 1.0625em; /* 17/16 */
+
+.social .fa {
+	font-size: 1.0625em;
+	/* 17/16 */
 }
-.social-icon{
+
+.social-icon {
 	display: block;
-	width: 3em; /* 48/16 */
+	width: 3em;
+	/* 48/16 */
 
 	color: #989898;
-	background: #eeefed00; 
+	background: #eeefed00;
 
-	border-radius: 0.625em ; /* 10/16 */
-	margin-left: 0.3125em;  /* 5/16 */
+	border-radius: 0.625em;
+	/* 10/16 */
+	margin-left: 0.3125em;
+	/* 5/16 */
 }
+
 .selected a,
 .social-icon:hover,
 .social-icon:active,
-.social-icon:focus{
+.social-icon:focus {
 	color: #bbb362;
 }
 
 /*MAIN*/
 
-.header-photo{
+.header-photo {
 	position: absolute;
 	left: 0;
 	padding-right: 0px;
@@ -149,9 +155,9 @@ section h2 {
 	margin-top: 70px;
 	color: #bbb362;
 	text-shadow: -1px 1px 0 #000,
-                  1px 1px 0 #000,
-                  1px -1px 0 #000,
-                 -1px -1px 0 #000;             
+		1px 1px 0 #000,
+		1px -1px 0 #000,
+		-1px -1px 0 #000;
 }
 
 
@@ -160,16 +166,18 @@ section h2 {
 
 
 
-.main-footer{
+.main-footer {
 	color: #A8A8A8;
 	background: #333;
 	width: 100%;
-  	height: 7.5em; /* 120/16 */
-  	position: absolute;
-  	left: 0;
-    margin-top: 10%;
+	height: 7.5em;
+	/* 120/16 */
+	position: absolute;
+	left: 0;
+	margin-top: 10%;
 
 }
+
 .main-footer a {
 	color: #bbb362;
 	text-decoration: none;
@@ -177,19 +185,20 @@ section h2 {
 }
 
 
-.main-footer .fa{
+.main-footer .fa {
 	color: #bbb362;
-	padding-right: 4px 
+	padding-right: 4px
 }
 
 /*ADAPTIVE*/
 
 
-@media screen and (min-width: 1000px){
-	.openbtn{
-		display: none;	
+@media screen and (min-width: 1000px) {
+	.openbtn {
+		display: none;
 	}
-	.sidepanel{
+
+	.sidepanel {
 		display: none;
 	}
 }
@@ -198,39 +207,45 @@ section h2 {
 
 
 
-@media screen and (max-width: 1000px){
-	.navigation{
+@media screen and (max-width: 1000px) {
+	.navigation {
 		display: none;
 	}
 
 	.selected a,
 	.navigation a:hover,
-	.navigation a:focus{
+	.navigation a:focus {
 		color: #bbb362;
-	}	
-	.social li{
-		margin-top: 0.25em; /* 13/16 */
 	}
 
-	.openbtn{
-		margin-top: 0em;   /* 8/16 */
+	.social li {
+		margin-top: 0.25em;
+		/* 13/16 */
+	}
+
+	.openbtn {
+		margin-top: 0em;
+		/* 8/16 */
 	}
 }
 
-@media screen and (max-width: 390px){
-	.footer-hidden{
+@media screen and (max-width: 390px) {
+	.footer-hidden {
 		display: none;
 	}
-	.main-footer p{
+
+	.main-footer p {
 		margin: 3.5%;
 	}
-	.social li{
-		margin-top: 0em; /* 13/16 */
+
+	.social li {
+		margin-top: 0em;
+		/* 13/16 */
 	}
-	.openbtn{
-	margin-top: 0.15em;   /* 8/16 */
+
+	.openbtn {
+		margin-top: 0.15em;
+		/* 8/16 */
 	}
 
 }
-
-
