@@ -147,11 +147,12 @@ img{
 h2{
 	font-family: 'Dancing Script', cursive;
 	font-size: 30px;
-	margin-bottom: 150px;
-	margin-top: 50px;
+	margin: 50px auto 150px auto;
+	
 }
 h1{
 	font-family: 'Bodoni Moda', serif;
+	margin: 0 auto;
 }
 /*FORM*/
 
@@ -301,13 +302,14 @@ form .form-row .textarea {
 
 
 .quote{
-	margin-top: 100px;
+	margin: 100px 0;
 	text-align: center;
-	line-height: 0;
+	padding: 0 30px;
 }
 .quote h3{
 	font-family: 'Great Vibes', cursive;
 	font-size: 40px;
+	margin-bottom: 0;
 }
 .quote h4{
 	float: right;
@@ -365,16 +367,19 @@ form .form-row .textarea {
 	.navigation a:focus{
 		color: #bbb362;
 }	
-
+	.quote h4{
+		margin-right: 0;
+	}
 }
 
-@media screen and (max-width: 1000px){
+/*@media screen and (max-width: 1000px){
 	.logo{
 		width: 80%;
+		
 	}
 	
 	
-}
+}*/
 @media (max-width: 700px) {
 	.form-container .text {
 		font-size: 30px;
@@ -396,7 +401,24 @@ form .form-row .textarea {
 		width: 55% !important;
 	}
 }
-
+@media screen and (max-width: 500px){
+	h2, h1{
+		font-size: 150%;
+		width: 90%;
+		
+	}
+	.quote{
+		line-height: normal;
+		display: inline-block;
+	}
+	.quote h3{
+		font-size: 190%;
+	}
+	.quote h4{
+		margin: 0px;
+		font-size: 110%;
+	}
+}
 @media screen and (max-width: 390px){
 	.footer-hidden{
 		display: none;
