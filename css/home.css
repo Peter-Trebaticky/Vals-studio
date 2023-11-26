@@ -317,6 +317,28 @@ form .form-row .textarea {
 	font-family: 'Bodoni Moda', serif;
 	font-size: 20px;
 }
+.accept {
+	display: inline-flex;
+	align-items: center;
+	right: 0;
+	margin-left: auto;
+	flex-wrap: wrap;
+	
+}
+.accept p {
+	margin: 0;
+	flex: 1;
+}
+.accept a{
+	text-decoration: underline;
+	color: #757519;
+}
+
+.accept input[type="checkbox"] {
+	margin-right: 10px;
+	width: 20px;
+	
+}
 /*FOOTER*/
 
 
@@ -372,14 +394,6 @@ form .form-row .textarea {
 	}
 }
 
-/*@media screen and (max-width: 1000px){
-	.logo{
-		width: 80%;
-		
-	}
-	
-	
-}*/
 @media (max-width: 700px) {
 	.form-container .text {
 		font-size: 30px;
@@ -417,6 +431,9 @@ form .form-row .textarea {
 	.quote h4{
 		margin: 0px;
 		font-size: 110%;
+	}
+	.main-footer a{
+		display: inline-block;
 	}
 }
 @media screen and (max-width: 390px){

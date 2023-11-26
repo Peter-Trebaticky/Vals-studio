@@ -248,10 +248,18 @@ main a:active{
 	.navigation a:hover,
 	.navigation a:focus{
 		color: #bbb362;
-}	
-
+	}	
 }
-
+@media screen and (max-width: 500px) {
+	.main-footer a {
+		display: inline-block;
+	}
+}
+@media screen and (max-width: 500px) {
+	.main-footer a {
+		display: inline-block;
+	}
+}
 @media screen and (max-width: 390px){
 	.footer-hidden{
 		display: none;
