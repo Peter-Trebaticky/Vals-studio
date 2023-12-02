@@ -32,7 +32,13 @@ h4{
 
 
 /*INFO article*/
-
+.accept{
+	color: #bbb362;
+	font-size: 13px;
+}
+.accept:hover{
+	color: #A8A8A8;
+}
 .zrsr{
 	color: #A8A8A8;
 	padding: 100px 0px 0px 0px;

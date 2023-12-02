@@ -92,37 +92,37 @@
 			<section class="form-sec">
 				<div class="form-container">
 					<div class="text">Kontaktujte nás</div>
-					<form action="#">
+					<form action="mail.php" method="post" autocomplete="off">
 						<div class="form-row">
 							<div class="input-data">
-								<input type="text" required>
+								<input type="text" id="subjectFn" name="subjectFn" required>
 								<div class="underline"></div>
-								<label for="">Meno</label>
+								<label for="subjectFn">Meno</label>
 							</div>
 							<div class="input-data">
-								<input type="text" required>
+								<input type="text" id="subjectLn" name="subjectLn" required>
 								<div class="underline"></div>
-								<label for="">Priezvisko</label>
+								<label for="subjectLn">Priezvisko</label>
 							</div>
 						</div>
 						<div class="form-row">
 							<div class="input-data">
-								<input type="text" required>
+								<input type="email" id="emailInput" name="email" required>
 								<div class="underline"></div>
 								<label for="">E-mail</label>
 							</div>
 							<div class="input-data">
-								<input type="text" required>
+								<input type="text" id="phoneN" name="phoneN" required>
 								<div class="underline"></div>
-								<label for="">Telefón</label>
+								<label for="phoneN">Telefón</label>
 							</div>
 						</div>
 						<div class="form-row">
 							<div class="input-data textarea">
-								<textarea rows="8" cols="80" required></textarea>
+								<textarea id="message" name="message" rows="8" cols="80" required></textarea>
 								<br />
 								<div class="underline"></div>
-								<label for="">Správa</label>
+								<label for="message">Správa</label>
 								<br />
 						<div class="form-row submit-btn">
 							<div class="input-data">
@@ -132,7 +132,7 @@
 							<div class="accept">
 								<input type="checkbox" id="suhlas" required>
 								<p>Súhlasím so spracovaním
-									<a href="suhlas-so-spracovanime.html" target="_blank">osobných údajov.</a>
+									<a href="suhlas-so-spracovanim.html" target="_blank">osobných údajov.</a>
 								</p>
 							</div>
 						</div>
@@ -148,6 +148,13 @@
 			
 			
 		</main>
+		
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<h2>Email úspešne odoslaný</h2>
+			</div>
+		</div>
+
 		<footer>
 			<article class="main-footer" style="text-align:center">
 				<p class="adress">Štefánikova 13 | 921 01 PIEŠŤANY</p>
