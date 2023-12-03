@@ -365,7 +365,8 @@ form .form-row .textarea {
 	text-align: center;
     color: #000;
     align-items: center;
-	padding-top: 10px;
+	display: flex;
+	justify-content: center;
     height: 100%;
 }
 /*FOOTER*/

@@ -1,28 +1,35 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+session_start();
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $to = 'lenkasprochova@gmail.com';
+
     $subjectFn = $_POST['subjectFn'];
     $subjectLn = $_POST['subjectLn'];
     $email = $_POST['email'];
     $phoneN = $_POST['phoneN'];
     $message = $_POST['message'];
 
-    $to = 'lenkasprochova@gmail.com';
 
+    $headers = "From: $email" . "\r\n"; 
+    $headers .= "Reply-To: $email" . "\r\n"; 
+    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
     $subject = 'VALS Objednávka';
-    $emailMessage = "Meno: $subjectFn $subjectLn\n";
-    $emailMessage .= "E-mail: $email\n";
-    $emailMessage .= "Telefón: $phoneN\n";
-    $emailMessage .= "Správa: $message\n";
+    
+    $emailMessage = "<p>VALS Studio - Lenka Šprochová</p>";
+    $emailMessage .= "<p>Návštevník tvojej stránky ti posiela správu.</p>";
+    $emailMessage .= "<p>Meno: $subjectFn $subjectLn</p>";
+    $emailMessage .= "<p>E-mail: $email</p>";
+    $emailMessage .= "<p>Telefón: $phoneN</p>";
+    $emailMessage .= "<p>Správa: $message</p>";
 
-    $result = mail($to, $subject, $emailMessage);
-
-     if ($result) {
+    if (mail($to, $subject, $emailMessage, $headers)) {
         $_SESSION["mailStatus"] = "success";
     } else {
         $_SESSION["mailStatus"] = "error";
     }
-    
-    header("Location: ../index.html?mailStatus=" . $_SESSION["mailStatus"]);
+
+    header("Location: ../index?mailStatus=" . $_SESSION["mailStatus"]);
     exit();
 }
 ?>
