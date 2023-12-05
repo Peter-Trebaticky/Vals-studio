@@ -2,7 +2,7 @@
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $to = 'lenkasprochova@gmail.com';
+    $to = 'vals.piestany@gmail.com';
 
     $subjectFn = $_POST['subjectFn'];
     $subjectLn = $_POST['subjectLn'];

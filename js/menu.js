@@ -6,7 +6,7 @@ window.onload = function() {
   const whatsAppLink = "https://api.whatsapp.com/send?phone=+421907532766&";
   const phoneNumberText = "+421 907 532 766"
   const phoneNumberLink = "+421907532766"
-  const emailAdressLT = "lenkasprochova@gmail.com";
+  const emailAdressLT = "vals.piestany@gmail.com";
   
   const phoneNumber = document.getElementById("phoneNumber");
   const iconElementTel = document.createElement("i");

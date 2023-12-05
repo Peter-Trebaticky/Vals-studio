@@ -71,10 +71,60 @@
 				 <h4>Adresa</h4>
 				 <p>Lenka Šprochová<br/>Štefánikova 13<br/>921 01 Piešťany</p>
 				 <h4>E-mail</h4>
-				 <p><a href="mailto:lenkasprochova@gmail.com">lenkasprochova@gmail.com</a></p>
+				 <p><a href="mailto:vals.piestany@gmail.com">vals.piestany@gmail.com</a></p>
 				 <h4>Tel.kontakt</h4>
 				 <p><a href="tel:+421907532766">+421 907 532 766</a></p>
 			</div>
+			<section class="form-sec">
+				<div class="form-container">
+					<div class="text">Kontaktujte nás</div>
+					<form action="mail.php" method="post" autocomplete="off">
+						<div class="form-row">
+							<div class="input-data">
+								<input type="text" id="subjectFn" name="subjectFn" required>
+								<div class="underline"></div>
+								<label for="subjectFn">Meno</label>
+							</div>
+							<div class="input-data">
+								<input type="text" id="subjectLn" name="subjectLn" required>
+								<div class="underline"></div>
+								<label for="subjectLn">Priezvisko</label>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="input-data">
+								<input type="email" id="emailInput" name="email" required>
+								<div class="underline"></div>
+								<label for="">E-mail</label>
+							</div>
+							<div class="input-data">
+								<input type="text" id="phoneN" name="phoneN" required>
+								<div class="underline"></div>
+								<label for="phoneN">Telefón</label>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="input-data textarea">
+								<textarea id="message" name="message" rows="8" cols="80" required></textarea>
+								<br />
+								<div class="underline"></div>
+								<label for="message">Správa</label>
+								<br />
+								<div class="form-row submit-btn">
+									<div class="input-data">
+										<div class="inner"></div>
+										<input type="submit" value="odoslať">
+									</div>
+									<div class="accept">
+										<input type="checkbox" id="suhlas" required>
+										<p>Súhlasím so spracovaním
+											<a href="suhlas-so-spracovanim.html" target="_blank">osobných údajov.</a>
+										</p>
+									</div>
+								</div>
+					</form>
+				</div>
+			</section>
 
 			<article class="zrsr">
 				<a class="accept" href="suhlas-so-spracovanim.html" target="_blank">Súhlas so spracovaním osobných údajov</a>
