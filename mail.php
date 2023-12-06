@@ -13,7 +13,7 @@ try {
     $mail->Host = 'smtp.hostcreators.sk'; 
     $mail->SMTPAuth = true; 
     $mail->Username = 'objednavky@permanentny-makeup-piestany.sk'; 
-    $mail->Password = 'RRza924U.-e-5.Ym'; 
+    $mail->Password = 'pass'; 
     $mail->SMTPSecure = 'ssl'; 
     $mail->Port = 465;
     $mail->CharSet = 'UTF-8';
