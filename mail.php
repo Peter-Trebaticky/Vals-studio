@@ -1,35 +1,47 @@
 <?php
-session_start();
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $to = 'vals.piestany@gmail.com';
+require 'PHPMailer-master/src/Exception.php';
+require 'PHPMailer-master/src/PHPMailer.php';
+require 'PHPMailer-master/src/SMTP.php';
 
-    $subjectFn = $_POST['subjectFn'];
-    $subjectLn = $_POST['subjectLn'];
-    $email = $_POST['email'];
-    $phoneN = $_POST['phoneN'];
-    $message = $_POST['message'];
+$mail = new PHPMailer(true); 
+try {
+    //Server settings
+    $mail->isSMTP();
+    $mail->Host = 'smtp.hostcreators.sk'; 
+    $mail->SMTPAuth = true; 
+    $mail->Username = 'objednavky@permanentny-makeup-piestany.sk'; 
+    $mail->Password = 'RRza924U.-e-5.Ym'; 
+    $mail->SMTPSecure = 'ssl'; 
+    $mail->Port = 465;
+    $mail->CharSet = 'UTF-8';
 
+    //Recipients
+    $mail->setFrom('objednavky@permanentny-makeup-piestany.sk');
+    $mail->addReplyTo($_POST['email']);
+    $mail->addAddress('vals.piestany@gmail.com'); //Prijmatel
 
-    $headers = "From: $email" . "\r\n"; 
-    $headers .= "Reply-To: $email" . "\r\n"; 
-    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-    $subject = 'VALS Objednávka';
-    
+    //Content
+    $mail->isHTML(true);               
+    $mail->Subject = 'VALS Objednávka';
     $emailMessage = "<p>VALS Studio - Lenka Šprochová</p>";
     $emailMessage .= "<p>Návštevník tvojej stránky ti posiela správu.</p>";
-    $emailMessage .= "<p>Meno: $subjectFn $subjectLn</p>";
-    $emailMessage .= "<p>E-mail: $email</p>";
-    $emailMessage .= "<p>Telefón: $phoneN</p>";
-    $emailMessage .= "<p>Správa: $message</p>";
+    $emailMessage .= "<p>Meno: " . $_POST['subjectFn'] . " " . $_POST['subjectLn'] . "</p>";
+    $emailMessage .= "<p>E-mail: " . $_POST['email'] . "</p>";
+    $emailMessage .= "<p>Telefón: " . $_POST['phoneN'] . "</p>";
+    $emailMessage .= "<p>Správa: " . $_POST['message'] . "</p>";
+    
+    $mail->Body = $emailMessage;
 
-    if (mail($to, $subject, $emailMessage, $headers)) {
-        $_SESSION["mailStatus"] = "success";
-    } else {
-        $_SESSION["mailStatus"] = "error";
+    $mail->send();
+    header("Location: ../index?mailStatus=success");
+    exit();
+} catch (Exception $e) {
+    header("Location: ../index?mailStatus=error");
+    exit();
     }
 
-    header("Location: ../index?mailStatus=" . $_SESSION["mailStatus"]);
-    exit();
-}
 ?>
+
